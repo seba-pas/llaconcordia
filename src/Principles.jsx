@@ -16,22 +16,23 @@ function Principles() {
   ];
 
   return (
-    <div className="p-20 px-100">
-      <h1 className="font-medium mb-4 font-[Montserrat] text-3xl  text-blue-900">Principios</h1>
+    <div className="p-10 px-20">
+      <h1 className="font-medium mb-4 font-[Montserrat] text-3xl text-blue-900">Principios</h1>
       <div className='h-1 w-12 bg-yellow-500'></div>
-      {/* Grid de 3 columnas en pantallas medianas, ajustable en pantallas más pequeñas */}
+      {/* Grid de 1 columna en pantallas pequeñas y 3 columnas en pantallas medianas y más grandes */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-[Montserrat] text-xl">
         {principles.map((principle, index) => (
-          <div 
-            key={index} 
-            className=" p-4 rounded shadow-md bg-white"
+          <div
+            key={index}
+            className="p-4 rounded shadow-md bg-white"
           >
             {/* Encabezado con el número */}
             <div className="text-2xl font-extrabold mb-2">{index + 1}.</div>
             {/* Texto del principio */}
             {
               index + 1 === 10 ?
-             <p className='text-purple-700 font-bold'>{principle}</p> :   <p>{principle}</p> 
+                <p className='text-purple-700 font-bold'>{principle}</p> :
+                <p>{principle}</p>
             }
           </div>
         ))}
