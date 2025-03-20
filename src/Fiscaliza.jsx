@@ -37,12 +37,36 @@ const FiscalizaPage = () => {
     barrio: "",
     email: "",
     celular: "",
+    registro: 'fiscal'
   };
 
-  const handleSubmit = (values) => {
-    console.log("Valores del formulario:", values);
-    // Aquí podrías manejar la lógica de envío, por ejemplo enviando a un backend
+  const handleSubmit = async (values, { resetForm, setSubmitting }) => {
+    try {
+      await fetch(
+        'https://script.google.com/macros/s/AKfycbzZLDwmWaua-5ulMwogOUMwye3pegsOZUF8yDbrzrGpeck2SG4j-Bte2oHQRwhr4Yg7zQ/exec',
+        {
+          method: 'POST',
+          mode: 'no-cors', // obligatorio para evitar errores CORS
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+        }
+      );
+  
+      alert("¡Registro enviado con éxito!");
+      resetForm();
+  
+    } catch (error) {
+      console.error("Error enviando datos:", error);
+      alert("Error al registrar, intenta nuevamente.");
+    } finally {
+      setSubmitting(false);
+    }
   };
+  
+
+
 
   return (
     <>

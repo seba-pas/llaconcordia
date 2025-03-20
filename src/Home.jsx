@@ -32,25 +32,25 @@ function Home() {
           showPrincipios={true}
         />{" "}
         {/* Use the Navbar component */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mt-15">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mt-15 ">
           <button
             onClick={() => navigate("/sumate")}
-            className="bg-blue-900 hover:bg-violet-800 h-35 w-100 rounded-full text-white font-[Montserrat] text-2xl sm:text-xl md:text-3xl lg:text-4xl font-extrabold flex gap-5 flex-row justify-center items-center hover:gap-15 transition-all duration-300"
+            className="bg-blue-900 hover:bg-violet-800 h-25 mt-5 w-md rounded-full text-white font-[Montserrat] text-3xl   font-extrabold flex gap-5 flex-row justify-center items-center hover:gap-15 transition-all duration-300"
           >
             SUMATE
             <FaArrowCircleRight
               size={30}
-              className="sm:size-15 md:size-18 lg:size-20"
+              className="sm:size-18 md:size-18 lg:size-20"
             />
           </button>
           <button
             onClick={() => navigate("/fiscaliza")}
-            className="bg-blue-900 hover:bg-violet-800 h-35 mt-5 w-100 rounded-full text-white font-[Montserrat] text-2xl sm:text-xl md:text-3xl lg:text-4xl font-extrabold flex gap-5 flex-row justify-center items-center hover:gap-15 transition-all duration-300"
+            className="bg-blue-900 hover:bg-violet-800 h-25 mt-5 w-md rounded-full text-white font-[Montserrat] text-3xl   font-extrabold flex gap-2 flex-row justify-center items-center hover:gap-15 transition-all duration-300"
           >
             FISCALIZÁ
             <FaArrowCircleRight
-              size={30}
-              className="sm:size-15 md:size-18 lg:size-20"
+              size={25}
+              className="sm:size-18 md:size-18 lg:size-20"
             />
           </button>
         </div>
