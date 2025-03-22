@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import MILEIAS from "./assets/milei-asuncion.webp";
+import MILEIAS from "./assets/mileipunio.png";
 import Navbar from "./Navbar";
 import Logo from "./Logo";
 

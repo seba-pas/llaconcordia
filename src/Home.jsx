@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
-import MILEI from "./assets/milei.webp";
+import MILEI from "./assets/mileibandera.jpg";
 import Principles from "./Principles";
 import Logo from "./Logo";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleRight, FaInstagram  } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar"; // Import the new Navbar component
 
@@ -59,8 +60,14 @@ function Home() {
       <div ref={principlesRef}>
         <Principles />
       </div>
-      <footer className="w-screen h-40 bg-blue-950">
-        <div className="flex justify-end pt-10 mr-20">
+      <footer className="w-screen h-40 bg-blue-950 flex justify-between px-4">
+        <div className='mt-20 flex'>
+
+        <FaInstagram color={'white'} size={40} />
+        <a className='text-white ml-2 text-lg font-semibold pt-1' href="https://www.instagram.com/lalibertadavanza_concordia/">@lalibertadavanza_concordia</a>
+        </div>
+
+        <div className="pt-10 mr-20">
           <Logo />
         </div>
       </footer>
